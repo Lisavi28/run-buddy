@@ -11,6 +11,9 @@ body
 }
 /* aplly styles to <header> */
 header {
+    display: flex; /*add*/
+    justify-content: space-between;
+    flex-wrap: wrap;
     padding: 20px 35px;
     background-color: #39a6b2;
 }
@@ -28,7 +31,7 @@ header a {
     color: #fce138;
 }
 header nav {
-    float: right;
+    /*float: right;*/
     margin: 7px 0;
 }
 header nav ul li {
