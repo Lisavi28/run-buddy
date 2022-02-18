@@ -1,32 +1,40 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
 }
 
 /*styles for body*/
 body 
 {
-    /*more on this crazy alphanumerical value in a minute! */
     color: #39a6b2;
     font-family: Helvetica, Arial, sans-serif;
 }
 /* aply styles to header */
 
 header {
-    display: flex; /*add*/
-    justify-content: space-between;
-    flex-wrap: wrap;
     padding: 20px 35px;
     background-color: #39a6b2;
+    display: flex; /*add*/
+    justify-content: space-between;    
+    flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: 80%; /*center*/
+    /*background-attachment: fixed;  */  
 }
 
 header h1 {
     font-weight: bold;
+    margin: 0;
     font-size: 36px;
     color: #fce138;
-    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     /*display: inline;*/
+      /* add alongside your existing declarations */  
 }
 
 header a {
@@ -51,23 +59,31 @@ header nav ul {
   }
 
 header nav ul li a {
-   /* margin: 0 30px;*/
+    /*margin: 0 30px;*/
     font-weight: lighter;
     font-size: 1.55vw;
-    padding: 10px 15 px
+    padding: 10px 15 px;
+    /* and here*/
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+/*style all section tags */
+section{
+  padding: 60px;
+}
+
 /* Hero Style Start */
 
 .hero {
     background-image: url("../images/hero-bg.jpg");
-    /*height: 600px;*/
     background-size: cover;
     background-position: center;
+    /*height: 600px;*/
     /*position: relative;*/
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: flex-start; 
 }
 .hero-cta {
   width: 35%;
@@ -75,13 +91,15 @@ header nav ul li a {
   margin: 3.5%;
   color: #fff;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1.2; 
 }
 
 .hero-cta h2 {
-   font-style: italic;
+  font-style: italic;
   font-size: 55px;
   color: #fce138;
+  /*and here*/
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-form {
@@ -95,10 +113,12 @@ header nav ul li a {
     /*position: absolute;
     bottom: 120px;
     right: 140px;*/
+    box-shadow: 0 0 10px rgba(252, 225, 56, 0.8);
+    border-radius: 15px;
 }
 
 .hero-form h3{
-        font-size: 24px;
+    font-size: 24px;
     margin: 0;
   }
 
@@ -114,16 +134,19 @@ header nav ul li a {
     color: #024e76;
     width: 100%;
     margin-bottom: 15px;
+    border-radius: 10px;
+  
 }
 .hero-form label {
     margin: 0 5px;
 }
 .hero-form button{
-    background-color: #024e76;
     color: #fce138;
+    background-color: #024e76;
     border: none;
     padding: 10px  20px;
     font-size: 16px;
+    border-radius: 10px;
 }
 /*hero styles end*/
 
@@ -131,10 +154,6 @@ header nav ul li a {
     text-align: center;*/
 
 /*section styles */
-
-section{
-      padding: 60px;
-  }
 
 .section-title {
     font-size: 48px;
@@ -157,12 +176,14 @@ section{
     border-color: #39a6b2;
 }   
 
+/*what we do styles*/
+
 .intro p {
     line-height: 1.7;
     color: #39a6b2;
     width: 80%;
-    font-size: 20px;
     margin: 0 auto;
+    font-size: 20px;
     text-align: center;
   }
 
@@ -208,28 +229,32 @@ section{
   margin-right: 20px;
 }
 
+.step-img img {
+  max-width: 100%;
+}
+
 .step-text {
   flex: 12;
 }
 
-.step-img img {
-  max-width: 100%;
+.step-text p {
+  color: #39a6b2;
+  font-size: 18px;
 }
+ /*.steps p {
+        /*pendiente ahora step-text p*/
 
 .step-text h4 {
   font-size: 26px;
   line-height: 1.5;
   color: #024e76;
 }
-  /*.steps p {
-    color: #39a6b2;
-    font-size: 23px;
-.steps span {
-    font-size: 38px;
-  }*/
+    
+/*.steps span {     /*pendiente + */
+   /* font-size: 38px;
+  }/*/
 
-   /*.trainers {
-     text-align: center;*/
+   /*.trainers  */
 
  .trainers {
       width: 100%;
@@ -255,23 +280,11 @@ section{
     
   .trainer-bio {
     padding: 25px;
+    line-height: 1.3;
     /*float: left;
     width: 65%; */
-    line-height: 1.3;
   }
 
-  .text-left {
-    text-align: left;
-  }
-  
-  .text-right {
-    text-align: right;
-}
-
-  .flex-row {
-      display: flex;
-    }
-  
   .trainer-bio h3 {
     font-size: 28px;
    /* margin-bottom: 8px;*/
@@ -286,7 +299,7 @@ section{
   .trainer-bio p {
     font-size: 17px;
     /*line-height: 1.3;*/
-  }
+  } 
   /*.section-title {
     font-size: 55px;
     display: inline-block;
@@ -303,9 +316,49 @@ section{
     background: #024e76;
   }
 
+  .contact h2 {
+    color: #fce138;
+  } 
+
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .contact-info > * {
+    flex: 1;
+    margin: 15px;
+  }
+
+  .contact-info iframe {
+    /* width: 400px;*/
+     height: 400px;
+   }
+ 
+   .contact-info div {
+    /* width: 410px;
+     display: inline-block;
+     vertical-align: top;
+     text-align: left;
+     margin: 30px 0 0 60px;*/
+     color: white;
+   }
+
+   .contact-info h3 {
+    color: #fce138;
+    font-size: 32px;
+  }
+
+  .contact-info p, .contact-info address {
+    margin: 20px 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-style: normal;
+  }
+  
   .contact-form input, .contact-form textarea {
     
-
     border: 1px solid #024e76;
     display: block;
     padding: 7px 15px;
@@ -314,11 +367,11 @@ section{
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 10px;
   }
 
   .contact-form button {
     
-
     width: 100%;
     border: none;
     background: #fce138;
@@ -326,54 +379,29 @@ section{
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 10px;
   }
 
-  .contact h2 {
-    color: #fce138;
-  } 
-
-
-  .contact-info iframe {
-   /* width: 400px;*/
-    height: 400px;
-  }
-
-  .contact-info div {
-   /* width: 410px;
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    margin: 30px 0 0 60px;*/
-    color: white;
-  }
-
-  .contact-info {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .contact-info > * {
-    flex: 1;
-    margin: 15px;
-  }
-
-.contact-info h3 {
-  color: #fce138;
-  font-size: 32px;
-}
-
-.contact-info p, .contact-info address {
-  margin: 20px 0;
-  line-height: 1.5;
-  font-size: 16px;
-  font-style: normal;
-}
-
-.contact-info a {
-  color: #fce138;
+  .contact-info a {
+   color: #fce138;
 }
 
 /* REACH OUT STYLES END */
+
+/* UTILITIES */
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex-row {
+    display: flex;
+  }
+ /*footer styles */
 
 footer {
   background: #fce138;
@@ -404,6 +432,7 @@ footer a {
     header {
       padding-bottom: 0;
       justify-content: center;
+      position: relative  
     }
   
     header h1 {
