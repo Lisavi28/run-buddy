@@ -14,7 +14,7 @@
 /*styles for body*/
 body 
 {
-    color: --;
+    color: var(--tertiary-color);
     font-family: Helvetica, Arial, sans-serif;
 }
 /* aply styles to header */
@@ -22,15 +22,15 @@ body
 header {
     padding: 20px 35px;
     background-color: var(--tertiary-color);
-    display: flex; /*add*/
+    display: flex;
     justify-content: space-between;    
     flex-wrap: wrap;
-    position: -webkit-sticky;
     position: sticky;
+    position: -webkit-sticky;
     top: 0;
     background-image: url("../images/hero-bg.jpg");
     background-size: cover;
-    background-position: 80%; /*center*/
+    background-position: 80%;
     background-attachment: fixed; 
     z-index: 9999; 
 }
@@ -40,9 +40,7 @@ header h1 {
     margin: 0;
     font-size: 36px;
     color: var(--primary-color);
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    /*display: inline;*/
-      /* add alongside your existing declarations */  
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
 
 header a {
@@ -51,12 +49,8 @@ header a {
 }
 
 header nav {
-    /*float: right;*/
     margin: 7px 0;
 }
-/*header nav ul li {
-    display: inline;
-} remove for flexbox*/
 
 header nav ul {
     display: flex;
@@ -67,10 +61,9 @@ header nav ul {
   }
 
 header nav ul li a {
-    /*margin: 0 30px;*/
+    padding: 10px 15px;/*margin: 0 30px;*/
     font-weight: lighter;
     font-size: 1.55vw;
-    padding: 10px 15 px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -99,7 +92,6 @@ section{
     flex-wrap: wrap;
     align-items: flex-start; 
     background-attachment: fixed;
-
 }
 .hero-cta {
   width: 35%;
